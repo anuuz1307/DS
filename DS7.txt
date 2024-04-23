@@ -1,0 +1,45 @@
+*Create project
+*select glassfish server
+*right click and create webservice
+*right click on web sevrice and add 4 operation,change return type
+*right click on project then build.
+*right click web service then test web service
+*create new project as it is
+*then open pallate(window=>IDE tool=>pallate)
+
+*<form action="CalculatorServlet">
+
+Enter Number-1: <input type="text" name="number1" value=""/> <br>
+
+Enter Number-2: <input type="text" name="number2" value=""/> <br>
+
+<input type="submit" value="Submit" /></form>
+
+*right click on 2nd project ,new=>web service client=>project=>select 1st project &set default package
+
+*right click on 2nd project,new=>servlet=>CalculatorServlet=> next =>check the checkbox(add info)finish
+
+*drag the operation from 2nd project(web service refernces) in CalculatorServlet
+*add this in try block of CalculatorServlet
+
+double num1, num2;
+num1=Double.parseDouble(request.getParameter("number1")); 
+num2 = Double.parseDouble(request.getParameter("number2"));
+out.println("<!DOCTYPE html>");
+out.println("<html>");
+out.println("<head>");
+out.println("<title>Calculator Servelet Output</title>");
+out.println("</head>");
+out.println("<body>");
+out.println("<h1>Addition Is: " + addition(num1, num2) +"</h1>");
+out.println("<h1>Subtraction is: " + subtraction(num1, num2) + "</h1>");
+out.println("<h1>Multiplication is: "+ multiplication(num1, num2) + "</h1>");
+out.printin("<h1>Division Is:"+ division(num1, num2) + "</h1>");
+out.println("</body>"); 
+out.println("</html>");
+
+*clean and build 2nd project
+*go on 2nd project =>web pages=>web INF=>index.html=>run file right click
+
+
+ 
